@@ -1,0 +1,42 @@
+const express = require("express");
+const UserRoutes = require("./users/user.routes");
+const BoardRoutes = require("./board/board.routes");
+const SubjectRoutes = require("./subject/subject.routes");
+const BatchRoutes = require("./batch/batch.routes");
+const TeacherRoutes = require("./teachers/teacher.routes");
+const FeeRoutes = require("./fees/fee.routes");
+const TeachingProgressRoutes = require("./teaching-progress/teachingProgress.routes");
+const EnrollmentRoutes = require("./enrollment-progress/enrollment.routes");
+const AttendanceRoutes = require("./attendance/attendance.route");
+const GraphRoutes = require("./graphs/grahph.route");
+const ContactFormRoutes = require("./contact/contact.route");
+const StudentAttendanceRoutes = require("./attendance/studentAttendance.route");
+const StudentEnrollmentRoutes = require("./enrollment-progress/studentEnrollment.routes");
+const AiRoutes = require("./ai/ai.routes");
+const NoteRoutes = require("./notes/notes.routes");
+const NotificationRoutes = require("./notifications/notification.routes");
+const HomeworkRoutes = require("./homework/homework.routes");
+const StudentHomeworkRoutes = require("./homework/studentHomework.routes");
+
+const ApiV1Routes = express.Router();
+
+ApiV1Routes.use("/user", UserRoutes);
+ApiV1Routes.use("/board", BoardRoutes);
+ApiV1Routes.use("/subject", SubjectRoutes);
+ApiV1Routes.use("/batch", BatchRoutes);
+ApiV1Routes.use("/teacher", TeacherRoutes);
+ApiV1Routes.use("/fee", FeeRoutes);
+ApiV1Routes.use("/teaching-progress", TeachingProgressRoutes);
+ApiV1Routes.use("/enrollment", EnrollmentRoutes);
+ApiV1Routes.use("/student-enrollment", StudentEnrollmentRoutes);
+ApiV1Routes.use("/attendance", AttendanceRoutes);
+ApiV1Routes.use("/student-attendance", StudentAttendanceRoutes);
+ApiV1Routes.use("/graph", GraphRoutes);
+ApiV1Routes.use("/contact", ContactFormRoutes);
+ApiV1Routes.use("/ai", AiRoutes);
+ApiV1Routes.use("/notes", NoteRoutes);
+ApiV1Routes.use("/notifications", NotificationRoutes);
+ApiV1Routes.use("/homework", HomeworkRoutes);
+ApiV1Routes.use("/student-homework", StudentHomeworkRoutes);
+
+module.exports = ApiV1Routes;

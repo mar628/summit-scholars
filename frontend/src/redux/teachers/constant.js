@@ -1,0 +1,9 @@
+export const TEACHER_LIST = {
+  request: 'TEACHER_LIST_REQUEST',
+  success: 'TEACHER_LIST_SUCCESS',
+  fail: 'TEACHER_LIST_FAIL',
+  update: 'TEACHER_LIST_UPDATE',
+};
+
+export const CLEAR_TEACHER_ERRORS = 'CLEAR_TEACHER_ERRORS';
+export const RESET_TEACHER_STATE = 'RESET_TEACHER_STATE';
