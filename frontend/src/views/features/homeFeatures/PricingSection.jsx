@@ -13,7 +13,7 @@ import { Clock, Star, Zap } from 'lucide-react';
 const plans = [
   {
     name: 'Single Session',
-    price: 'KSh 500',
+    price: 'KSh ',
     period: 'Per 1-hour session',
     description: 'Perfect for trying out or one-off revision help',
     featured: false,
@@ -27,7 +27,7 @@ const plans = [
   },
   {
     name: 'Weekly Package',
-    price: 'KSh 1,800',
+    price: 'KSh ',
     period: '4 sessions/month (KSh 450/session)',
     description: 'Our most popular plan for consistent progress',
     featured: true,
@@ -42,7 +42,7 @@ const plans = [
   },
   {
     name: 'Intensive Package',
-    price: 'KSh 3,200',
+    price: 'KSh ',
     period: '8 sessions/month (KSh 400/session)',
     description: 'Ideal for KCSE exam preparation',
     featured: false,
