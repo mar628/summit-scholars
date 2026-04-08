@@ -16,14 +16,14 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-
   build: {
     sourcemap: true,
     publicDir: './src/assets',
     assetsDir: './src/assets',
   },
   server: {
-    host: '0.0.0.0', // This is crucial for Docker
+    host: '0.0.0.0',
     port: 5173,
+    allowedHosts: ['all'],
   },
 });
