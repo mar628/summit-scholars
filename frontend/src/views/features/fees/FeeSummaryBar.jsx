@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { IndianRupee, Clock, CheckCircle, AlertCircle } from 'lucide-react';
+import { Wallet, Clock, CheckCircle, AlertCircle } from 'lucide-react';
 
 const FeeSummaryBar = ({ fees = [] }) => {
   const total = fees.reduce((s, f) => s + (f.amount || 0), 0);
@@ -7,12 +7,12 @@ const FeeSummaryBar = ({ fees = [] }) => {
   const pending = fees.filter((f) => f.status === 'pending').reduce((s, f) => s + f.amount, 0);
   const overdue = fees.filter((f) => f.status === 'overdue').reduce((s, f) => s + f.amount, 0);
 
-  const fmt = (n) => '₹' + n.toLocaleString('en-IN');
+  const fmt = (n) => 'KSh ' + n.toLocaleString('en-KE');
 
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
       {[
-        { label: 'Total Billed', value: fmt(total), icon: IndianRupee, color: 'text-blue-600 bg-blue-50' },
+        { label: 'Total Billed', value: fmt(total), icon: Wallet, color: 'text-blue-600 bg-blue-50' },
         { label: 'Paid', value: fmt(paid), icon: CheckCircle, color: 'text-green-600 bg-green-50' },
         { label: 'Pending', value: fmt(pending), icon: Clock, color: 'text-yellow-600 bg-yellow-50' },
         { label: 'Overdue', value: fmt(overdue), icon: AlertCircle, color: 'text-red-600 bg-red-50' },
@@ -28,4 +28,5 @@ const FeeSummaryBar = ({ fees = [] }) => {
     </div>
   );
 };
+
 export default memo(FeeSummaryBar);
