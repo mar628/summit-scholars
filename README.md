@@ -1,4 +1,4 @@
-# 🎓 AcademIQ Tuition Management System
+# 🎓 Summit Scholars Tuition Management System
 
 > A custom-built tuition management system designed to automate and streamline the workflow of small-scale tutors.
 
